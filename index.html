@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nagarjuna Reddy | DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Tech dots background -->
+  <canvas id="bg"></canvas>
+
+  <!-- Top nav -->
+  <header class="topbar">
+    <div class="brand">Nagarjuna<span>Reddy</span></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="pfp-wrap">
+      <div class="glow-ring"></div>
+      <img src="assets/profile.jpg" alt="Profile" class="pfp"/>
+    </div>
+    <div class="hero-copy">
+      <h1><span class="emoji">🚀</span> DevOps Engineer</h1>
+      <p class="sub">Cloud • Automation • CI/CD • Kubernetes • Monitoring</p>
+      <div class="cta-row">
+        <a class="btn primary" href="assets/nagarjuna_resume.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+        <a class="btn ghost" href="#projects"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
+      </div>
+      <div class="badges">
+        <span class="badge"><i class="fa-brands fa-aws"></i> AWS</span>
+        <span class="badge"><i class="fa-brands fa-microsoft"></i> Azure</span>
+        <span class="badge"><i class="fa-brands fa-docker"></i> Docker</span>
+        <span class="badge"><i class="fa-solid fa-cubes-stacked"></i> Kubernetes</span>
+        <span class="badge"><i class="fa-solid fa-code-branch"></i> CI/CD</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <p class="lead">
+      I’m a DevOps Engineer with 6+ years of experience in cloud infrastructure, automation and CI/CD.
+      I design resilient platforms on Azure & AWS, containerize workloads with Docker & Kubernetes, and
+      ship fast using Terraform/Bicep/Ansible with robust monitoring via Prometheus, Grafana and Azure Monitor.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-card">
+        <i class="fa-brands fa-aws"></i>
+        <h3>Cloud</h3>
+        <p>AWS, Azure, AKS, EKS, VMSS, VPC, AFD, ACR</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-code-branch"></i>
+        <h3>CI/CD</h3>
+        <p>Jenkins, Azure DevOps, TeamCity, Templates & YAML</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-docker"></i>
+        <h3>Containers</h3>
+        <p>Docker, Kubernetes, Helm, Argo CD, Argo Rollouts</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-file-code"></i>
+        <h3>IaC & Config</h3>
+        <p>Terraform, OpenTofu, Bicep, Ansible, Kustomize</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Observability</h3>
+        <p>Prometheus, Grafana, ELK, Azure Log Analytics</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Quality & Sec</h3>
+        <p>SonarQube, Branch Policies, SAST, Nexus</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience as pipeline -->
+  <section id="experience" class="section">
+    <h2 class="section-title">Experience (Pipeline)</h2>
+    <div class="pipeline">
+      <div class="stage">
+        <div class="stage-dot"></div>
+        <div class="stage-card">
+          <h3>WS Audiology • 2023–Present</h3>
+          <p>Azure IaC (Bicep/OpenTofu), GitOps with Argo CD, Umbrella Helm, Azure Monitor + Grafana.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-dot"></div>
+        <div class="stage-card">
+          <h3>Motivity Labs • 2021–2023</h3>
+          <p>Hybrid AWS+Azure, End‑to‑end CI/CD, Nexus, ELK, release automation with Power Platform.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-dot"></div>
+        <div class="stage-card">
+          <h3>Happiest Minds • 2019–2021</h3>
+          <p>Jenkins/TeamCity, K8s deployments, Kafka, Prometheus + Grafana dashboards.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-dot"></div>
+        <div class="stage-card">
+          <h3>Genworth • 2020–2021</h3>
+          <p>Terraform on AWS, Dockerized microservices, Helm, Groovy pipelines.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-dot"></div>
+        <div class="stage-card">
+          <h3>Sparsha Pharma • 2019–2020</h3>
+          <p>Build & Release, Git admin, Maven, Tomcat, Jenkins nightlies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects (flip cards) -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Key Projects</h2>
+    <div class="projects">
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h3>FitXP</h3>
+            <p>Azure DevOps • ArgoCD • AKS</p>
+          </div>
+          <div class="flip-back">
+            <p>Umbrella Helm charts, blue/green with Argo Rollouts, centralized logs and dashboards.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h3>Helix Sense</h3>
+            <p>AWS Glue • IoT Streaming • Terraform</p>
+          </div>
+          <div class="flip-back">
+            <p>Data from devices → Kinesis → Glue → DB; automated infra, CI/CD with Azure DevOps.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h3>HH Global</h3>
+            <p>Jenkins • Docker • Kafka</p>
+          </div>
+          <div class="flip-back">
+            <p>Master/agent builds, Docker‑Compose optimization, Kafka messaging, dashboards.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h3>Genworth</h3>
+            <p>AWS IaC • Helm • CI/CD</p>
+          </div>
+          <div class="flip-back">
+            <p>Terraform modules, Groovy pipelines, containerized apps, Helm releases.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:knagarjunareddy60@gmail.com">
+        <i class="fa-solid fa-envelope"></i> knagarjunareddy60@gmail.com
+      </a>
+      <div class="contact-card">
+        <i class="fa-solid fa-phone"></i> +91 9618338684
+      </div>
+      <a class="contact-card" href="https://github.com/YOUR_GITHUB" target="_blank">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+      <a class="contact-card" href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">© 2025 Nagarjuna Reddy • DevOps Portfolio</footer>
+</body>
+</html>
