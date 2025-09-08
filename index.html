@@ -1,0 +1,165 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nagarjuna Reddy — DevOps Universe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas id="galaxy"></canvas>
+
+  <header class="topbar">
+    <div class="brand">Nagarjuna<span>Reddy</span></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="k8s-frame">
+          <div class="ring-outer"></div>
+          <img src="assets/profile.jpg" alt="profile" class="profile" />
+          <svg class="k8s-wheel" viewBox="0 0 100 100" aria-hidden="true">
+            <g transform="translate(50,50)">
+              <circle r="32" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="2"></circle>
+              <g class="spokes">
+                <line x1="0" y1="-32" x2="0" y2="-44" stroke="url(#g1)" stroke-width="2"></line>
+                <line x1="0" y1="32" x2="0" y2="44" stroke="url(#g1)" stroke-width="2"></line>
+                <line x1="-32" y1="0" x2="-44" y2="0" stroke="url(#g1)" stroke-width="2"></line>
+                <line x1="32" y1="0" x2="44" y2="0" stroke="url(#g1)" stroke-width="2"></line>
+              </g>
+            </g>
+            <defs>
+              <linearGradient id="g1"><stop offset="0" stop-color="#00e0ff"/><stop offset="1" stop-color="#8a6bff"/></linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="hero-right">
+        <h1>🚀 DevOps Engineer — <span class="tagline">Deploying reliability, automation & scale</span></h1>
+        <p class="intro">I design cloud-native platforms, build CI/CD pipelines and automate infrastructure across AWS & Azure. Explore my DevOps Universe below.</p>
+        <div class="cta">
+          <a class="btn primary" href="assets/nagarjuna_resume.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+          <a class="btn ghost" href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+        </div>
+
+        <div class="cli" aria-hidden="false">
+          <span class="prompt">&gt;</span>
+          <span id="typed"></span>
+          <span class="cursor">█</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skill Galaxy</h2>
+      <p class="muted">Hover or tap a planet to see details.</p>
+      <div class="galaxy-map" id="galaxy-map" aria-hidden="false">
+        <!-- Planets will be injected by JS for easier editing -->
+      </div>
+    </section>
+
+    <section id="pipeline" class="section">
+      <h2>Experience Pipeline</h2>
+      <div class="pipeline">
+        <!-- pipeline stages -->
+        <div class="stage">
+          <div class="stage-dot success"></div>
+          <div class="stage-card">
+            <h3>WS Audiology <span class="muted">• 2023–Present</span></h3>
+            <p>Azure IaC (Bicep/OpenTofu), GitOps (Argo CD), AKS, Umbrella Helm, Monitoring (Grafana).</p>
+            <div class="stage-tools"><i class="fab fa-microsoft"></i><i class="fa-brands fa-docker"></i><i class="fa-solid fa-server"></i></div>
+          </div>
+        </div>
+        <div class="stage">
+          <div class="stage-dot success"></div>
+          <div class="stage-card">
+            <h3>Motivity Labs <span class="muted">• 2021–2023</span></h3>
+            <p>Hybrid cloud (AWS+Azure), CI/CD automation, Nexus, ELK, and release orchestration.</p>
+            <div class="stage-tools"><i class="fab fa-aws"></i><i class="fa-brands fa-bitbucket"></i><i class="fa-solid fa-database"></i></div>
+          </div>
+        </div>
+        <div class="stage">
+          <div class="stage-dot success"></div>
+          <div class="stage-card">
+            <h3>Happiest Minds <span class="muted">• 2019–2021</span></h3>
+            <p>Build & Release, Jenkins, TeamCity, Docker, Kubernetes and monitoring dashboards.</p>
+            <div class="stage-tools"><i class="fa-brands fa-jenkins"></i><i class="fa-solid fa-chart-line"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects & Pods</h2>
+      <div class="projects-grid">
+        <article class="pod">
+          <div class="pod-front"><h3>FitXP</h3><p class="muted">Azure DevOps • ArgoCD • AKS</p></div>
+          <div class="pod-back"><p>Umbrella Helm, Argo Rollouts, Zero-downtime deployments and monitoring.</p></div>
+        </article>
+        <article class="pod">
+          <div class="pod-front"><h3>Helix Sense</h3><p class="muted">AWS Glue • IoT • Terraform</p></div>
+          <div class="pod-back"><p>Device streaming → Glue → DB; infra automation & scalable pipelines.</p></div>
+        </article>
+        <article class="pod">
+          <div class="pod-front"><h3>HH Global</h3><p class="muted">Jenkins • Docker • Kafka</p></div>
+          <div class="pod-back"><p>Build optimizations, container staging, Kafka integration and logging.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <h2>Daily Tools & Metrics</h2>
+      <div class="tools-grid">
+        <div class="metric">
+          <div class="metric-title">Pipelines automated</div>
+          <div class="metric-value">50+</div>
+          <div class="metric-bar"><div style="width:85%"></div></div>
+        </div>
+        <div class="metric">
+          <div class="metric-title">Cloud infra (AWS/Azure)</div>
+          <div class="metric-value">100+</div>
+          <div class="metric-bar"><div style="width:80%"></div></div>
+        </div>
+        <div class="tool-badges">
+          <span class="tool"><i class="fab fa-aws"></i> AWS</span>
+          <span class="tool"><i class="fab fa-microsoft"></i> Azure</span>
+          <span class="tool"><i class="fa-brands fa-docker"></i> Docker</span>
+          <span class="tool"><i class="fa-solid fa-cube"></i> Kubernetes</span>
+          <span class="tool"><i class="fa-solid fa-code-branch"></i> GitOps</span>
+          <span class="tool"><i class="fa-solid fa-hammer"></i> Terraform</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Contact — Terminal</h2>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:knagarjunareddy60@gmail.com"><i class="fa-solid fa-envelope"></i> knagarjunareddy60@gmail.com</a>
+        <div class="contact-card"><i class="fa-solid fa-phone"></i> +91 9618338684</div>
+        <a class="contact-card" href="https://github.com/YOUR_GITHUB" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a class="contact-card" href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      </div>
+      <div class="terminal">
+        <div class="term-line">➜ <span class="muted">ping</span> <strong>nagarjuna.dev</strong></div>
+        <button class="btn primary" onclick="copyEmail()">Copy Email</button>
+        <div id="copymsg" class="muted" aria-live="polite"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">© 2025 Nagarjuna Reddy — DevOps Engineer</footer>
+</body>
+</html>
