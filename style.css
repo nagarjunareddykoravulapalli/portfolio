@@ -1,0 +1,52 @@
+:root{
+  --accent1:#00e0ff;
+  --accent2:#8a6bff;
+  --text:#e6eef6;
+  --muted:#9fb2c9;
+}
+body{
+  margin:0;
+  font-family:Inter, sans-serif;
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
+  color:var(--text);
+}
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 28px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(6px);
+  position:sticky;top:0;z-index:10;
+}
+.brand{font-weight:800;font-size:18px;}
+.brand span{background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  -webkit-background-clip:text;color:transparent;}
+.topbar nav a{margin-left:18px;color:var(--muted);text-decoration:none;}
+.topbar nav a:hover{color:var(--text);}
+
+.wrap{max-width:1100px;margin:30px auto;padding:0 22px;}
+.hero h1{font-size:36px;margin:0;}
+.hero p{color:var(--muted);margin:10px 0 20px;}
+.btn{padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer;
+  display:inline-flex;gap:8px;align-items:center;border:none;}
+.btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#04202a;}
+
+.section{margin-top:40px;}
+.section h2{color:var(--accent1);margin-bottom:12px;}
+
+.skills-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.skill{padding:10px 14px;background:rgba(255,255,255,0.08);border-radius:8px;}
+
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+.pod{perspective:1000px;position:relative;height:180px;}
+.pod-front,.pod-back{
+  position:absolute;inset:0;padding:16px;border-radius:12px;
+  backface-visibility:hidden;transform-style:preserve-3d;
+  transition:transform 0.6s;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+}
+.pod-front{background:rgba(255,255,255,0.08);}
+.pod-back{background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;transform:rotateY(180deg);}
+.pod:hover .pod-front{transform:rotateY(180deg);}
+.pod:hover .pod-back{transform:rotateY(360deg);}
+
+.footer{text-align:center;color:var(--muted);margin:40px 0;}
