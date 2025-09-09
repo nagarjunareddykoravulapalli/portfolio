@@ -3,106 +3,158 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nagarjuna Reddy — DevOps Portfolio</title>
+  <title>Nagarjuna Reddy — DevOps Engineer</title>
 
   <!-- Fonts & icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Local styles/scripts -->
+  <!-- Styles & script -->
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">Nagarjuna<span>Reddy</span></div>
-    <nav>
-      <a href="#skills">Skills</a>
-      <a href="#pipeline">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Nagarjuna<span>Reddy</span></div>
+      <nav class="top-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="wrap">
+  <main class="container">
     <!-- HERO -->
     <section class="hero">
       <div class="hero-left">
-        <!-- optional profile image -->
-        <div class="profile-wrap">
-          <img src="assets/profile.jpg" alt="Nagarjuna Reddy" class="profile"/>
-          <div class="ring"></div>
+        <div class="profile-card">
+          <div class="photo-wrap">
+            <img src="assets/profile.jpg" alt="Nagarjuna Reddy" class="profile-photo" />
+          </div>
+          <div class="tag">DevOps Engineer</div>
         </div>
       </div>
 
       <div class="hero-right">
-        <h1>🚀 DevOps Engineer</h1>
-        <p class="lead">Deploying reliable CI/CD pipelines, Kubernetes clusters, and cloud automation across AWS & Azure.</p>
-        <div class="hero-cta">
-          <a class="btn primary" href="assets/nagarjuna_resume.pdf" target="_blank">
-            <i class="fa-solid fa-file-arrow-down"></i> Resume
-          </a>
-          <a class="btn ghost" href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+        <h1 class="name">Nagarjuna <span class="accent">Reddy</span></h1>
+        <p class="headline">Designing resilient cloud platforms & automating CI/CD for fast, reliable delivery.</p>
+
+        <div class="hero-ctas">
+          <a class="btn primary" href="assets/nagarjuna_resume.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+          <a class="btn outline" href="#projects"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
         </div>
 
-        <div class="cli" aria-hidden="false">
-          <span class="prompt">&gt;</span>
-          <span id="typed"></span>
-          <span class="cursor">█</span>
+        <div class="typed-line" aria-hidden="false"><span class="prompt">&gt;</span> <span id="typed"></span><span class="cursor">█</span></div>
+
+        <ul class="hero-meta">
+          <li><strong>Location:</strong> India</li>
+          <li><strong>Experience:</strong> 6+ years</li>
+          <li><strong>Email:</strong> <a href="mailto:knagarjunareddy60@gmail.com">knagarjunareddy60@gmail.com</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section split">
+      <div>
+        <h2>About</h2>
+        <p>I'm a DevOps Engineer focused on cloud-native architectures, automation, and observability. I design IaC, implement GitOps flows (ArgoCD), and build resilient apps on AKS/EKS with Helm. Skilled across AWS & Azure, Terraform/Bicep, and modern CI/CD practices.</p>
+      </div>
+      <div class="cards-row">
+        <div class="stat">
+          <div class="num">50+</div>
+          <div class="label">Pipelines automated</div>
+        </div>
+        <div class="stat">
+          <div class="num">100+</div>
+          <div class="label">K8s deployments</div>
+        </div>
+        <div class="stat">
+          <div class="num">99.9%</div>
+          <div class="label">Platform uptime</div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS (pipeline nodes) -->
+    <!-- SKILLS GRID -->
     <section id="skills" class="section">
-      <h2>Skills Pipeline</h2>
-      <p class="muted">Hover nodes to highlight; click to learn more.</p>
-      <div class="pipeline skills-pipeline" id="skills-pipeline" role="list">
-        <!-- nodes are generated inline for simplicity -->
-        <div class="node" tabindex="0" data-title="AWS — VPC, EC2, EKS, S3, Glue">AWS</div>
-        <div class="node" tabindex="0" data-title="Azure — AKS, ACR, Bicep, App Insights">Azure</div>
-        <div class="node" tabindex="0" data-title="Azure DevOps — Pipelines, Repos, Artifacts">Azure DevOps</div>
-        <div class="node" tabindex="0" data-title="Jenkins — Pipelines, Groovy">Jenkins</div>
-        <div class="node" tabindex="0" data-title="Docker — Images, Compose">Docker</div>
-        <div class="node" tabindex="0" data-title="Kubernetes — AKS/EKS, Helm, ArgoCD">Kubernetes</div>
-        <div class="node" tabindex="0" data-title="Terraform — Modules, State, AWS & Azure">Terraform</div>
-        <div class="node" tabindex="0" data-title="ArgoCD — GitOps deployments">ArgoCD</div>
-        <div class="node" tabindex="0" data-title="Prometheus — Metrics, Alerts">Prometheus</div>
-        <div class="node" tabindex="0" data-title="Grafana — Dashboards, Alerts">Grafana</div>
-        <div class="node" tabindex="0" data-title="SonarQube — SAST, Quality Gates">SonarQube</div>
+      <h2>Skills</h2>
+      <p class="muted">Grouped for clarity — click any card to read quick examples of work.</p>
+
+      <div class="skills-grid">
+        <!-- Cloud -->
+        <article class="skill-card" tabindex="0" data-title="Cloud" data-body="AWS & Azure: VPC, EKS/AKS, ACR, S3, VMSS, CDN.">
+          <div class="icon"><i class="fa-brands fa-aws"></i></div>
+          <h3>Cloud</h3>
+          <p class="small muted">AWS, Azure</p>
+        </article>
+
+        <!-- CI/CD -->
+        <article class="skill-card" tabindex="0" data-title="CI/CD" data-body="Azure DevOps Pipelines, Jenkins, GitHub Actions, TeamCity — templated pipelines & release orchestration.">
+          <div class="icon"><i class="fa-solid fa-code-merge"></i></div>
+          <h3>CI / CD</h3>
+          <p class="small muted">Azure DevOps Pipelines • Jenkins</p>
+        </article>
+
+        <!-- Containers -->
+        <article class="skill-card" tabindex="0" data-title="Containers" data-body="Docker & Kubernetes: AKS/EKS clusters, Helm umbrella charts, ArgoCD GitOps rollouts.">
+          <div class="icon"><i class="fa-brands fa-docker"></i></div>
+          <h3>Containers</h3>
+          <p class="small muted">Docker • Kubernetes • Helm</p>
+        </article>
+
+        <!-- IaC -->
+        <article class="skill-card" tabindex="0" data-title="Infrastructure as Code" data-body="Terraform & Bicep: modular reusable modules, state management, OpenTofu experience.">
+          <div class="icon"><i class="fa-solid fa-cubes"></i></div>
+          <h3>IaC</h3>
+          <p class="small muted">Terraform • Bicep • Ansible</p>
+        </article>
+
+        <!-- Observability -->
+        <article class="skill-card" tabindex="0" data-title="Monitoring" data-body="Prometheus, Grafana, ELK, Azure Monitor — metrics, alerts, dashboards and runbook automation.">
+          <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Observability</h3>
+          <p class="small muted">Prometheus • Grafana • ELK</p>
+        </article>
+
+        <!-- Quality -->
+        <article class="skill-card" tabindex="0" data-title="Quality & Security" data-body="SonarQube, SAST, Nexus — build quality gates, SCA, and policy enforcement.">
+          <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Quality & Sec</h3>
+          <p class="small muted">SonarQube • SAST • Nexus</p>
+        </article>
       </div>
     </section>
 
-    <!-- EXPERIENCE (animated pipeline flow) -->
-    <section id="pipeline" class="section">
-      <h2>Experience Pipeline</h2>
-      <div class="exp-wrapper">
-        <div class="pipeline exp-pipeline" aria-hidden="false">
-          <div class="stage">
-            <div class="stage-dot"></div>
-            <div class="stage-card">
-              <h3>Happiest Minds</h3>
-              <div class="muted">2019 — 2021</div>
-              <p>Jenkins, TeamCity, Kubernetes deployments, Kafka, Prometheus & Grafana.</p>
-            </div>
+    <!-- EXPERIENCE TIMELINE -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <h3>WS Audiology <span class="muted">• 2023 — Present</span></h3>
+            <p>Azure IaC (Bicep/OpenTofu), ArgoCD, AKS, Umbrella Helm charts, monitoring with Grafana & App Insights.</p>
           </div>
+        </div>
 
-          <div class="stage">
-            <div class="stage-dot"></div>
-            <div class="stage-card">
-              <h3>Motivity Labs</h3>
-              <div class="muted">2021 — 2023</div>
-              <p>Hybrid AWS & Azure, CI/CD automation, Nexus, ELK, release orchestration.</p>
-            </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <h3>Motivity Labs <span class="muted">• 2021 — 2023</span></h3>
+            <p>Hybrid AWS & Azure, automated CI/CD pipelines, Nexus & ELK, enforced code quality standards.</p>
           </div>
+        </div>
 
-          <div class="stage">
-            <div class="stage-dot"></div>
-            <div class="stage-card">
-              <h3>WS Audiology</h3>
-              <div class="muted">2023 — Present</div>
-              <p>Azure IaC (Bicep/OpenTofu), Argo CD, AKS, Umbrella Helm, Grafana monitoring.</p>
-            </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <h3>Happiest Minds <span class="muted">• 2019 — 2021</span></h3>
+            <p>Jenkins, TeamCity, Kubernetes deployments, Kafka, Prometheus & Grafana monitoring.</p>
           </div>
         </div>
       </div>
@@ -110,50 +162,65 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
-      <h2>Projects & Pods</h2>
+      <h2>Key Projects</h2>
       <div class="projects-grid">
-        <article class="pod" tabindex="0">
-          <div class="pod-front">
+        <article class="project-card">
+          <div class="project-head">
             <h3>FitXP</h3>
-            <p class="muted">Azure DevOps • AKS • ArgoCD</p>
+            <div class="tags">Azure DevOps • AKS • ArgoCD</div>
           </div>
-          <div class="pod-back">
-            <p>Umbrella Helm, Argo Rollouts (blue/green), CI automation, Grafana dashboards.</p>
-          </div>
+          <p>Umbrella Helm charts, Argo Rollouts (blue/green), CI automation, Grafana dashboards and cost optimization.</p>
         </article>
 
-        <article class="pod" tabindex="0">
-          <div class="pod-front">
+        <article class="project-card">
+          <div class="project-head">
             <h3>Helix Sense</h3>
-            <p class="muted">AWS Glue • IoT • Terraform</p>
+            <div class="tags">AWS Glue • IoT • Terraform</div>
           </div>
-          <div class="pod-back">
-            <p>Device streaming → Glue → DB; infra automation and pipeline orchestration.</p>
-          </div>
+          <p>Device streaming pipeline into AWS Glue, infra automation with Terraform and scalable pipeline orchestration.</p>
         </article>
 
-        <article class="pod" tabindex="0">
-          <div class="pod-front">
+        <article class="project-card">
+          <div class="project-head">
             <h3>HH Global</h3>
-            <p class="muted">Jenkins • Docker • Kafka</p>
+            <div class="tags">Jenkins • Docker • Kafka</div>
           </div>
-          <div class="pod-back">
-            <p>Build optimizations, Docker staging, Kafka integration, monitoring.</p>
-          </div>
+          <p>Pipeline optimization, Docker staging, Kafka integration and monitoring with Prometheus & Grafana.</p>
         </article>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <h2>Contact — Terminal</h2>
-      <div class="terminal" role="application" aria-label="Interactive terminal">
-        <p><span class="prompt">➜</span> Click here and type <code>resume</code>, <code>github</code>, or <code>linkedin</code></p>
-        <div id="terminal-output" aria-live="polite"></div>
+      <h2>Contact</h2>
+
+      <div class="contact-grid">
+        <form id="contact-form" action="mailto:knagarjunareddy60@gmail.com" method="post" enctype="text/plain" class="contact-form">
+          <label><span>Name</span><input type="text" name="name" required></label>
+          <label><span>Email</span><input type="email" name="email" required></label>
+          <label><span>Message</span><textarea name="message" rows="4" required></textarea></label>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send Email</button>
+            <button class="btn outline" type="button" id="copy-email">Copy Email</button>
+          </div>
+        </form>
+
+        <div class="contact-cards">
+          <div class="card">
+            <h4>Resume</h4>
+            <p><a href="assets/nagarjuna_resume.pdf" target="_blank">Download PDF</a></p>
+          </div>
+          <div class="card">
+            <h4>Links</h4>
+            <p><a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a> • <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a></p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">© 2025 Nagarjuna Reddy — DevOps Engineer</footer>
+  <footer class="site-footer">
+    <div class="container">© 2025 Nagarjuna Reddy — DevOps Engineer</div>
+  </footer>
 </body>
 </html>
