@@ -1,70 +1,72 @@
-// Pipeline-themed portfolio interactions
-
-// Typed CLI lines for hero
-const lines = [
-  "deploying nagarjuna.devops:v6.0",
-  "running tests: ✅ 120 passed",
-  "syncing infra with Terraform...",
-  "gitops: applying manifests to AKS..."
+// Typed hero lines
+const typedLines = [
+  "Building scalable CI/CD pipelines...",
+  "Automating infrastructure with Terraform & Bicep...",
+  "Deploying apps to AKS & EKS with GitOps...",
+  "Observability: Prometheus, Grafana & App Insights..."
 ];
 let li = 0, ch = 0;
-const typed = document.getElementById('typed');
+const typedEl = document.getElementById('typed');
 function typeLoop(){
-  if(!typed) return;
-  const line = lines[li];
+  if(!typedEl) return;
+  const line = typedLines[li];
   if(ch <= line.length){
-    typed.textContent = line.substring(0, ch);
+    typedEl.textContent = line.substring(0, ch);
     ch++;
     setTimeout(typeLoop, 45);
   } else {
-    setTimeout(() => { ch = 0; li = (li + 1) % lines.length; typeLoop(); }, 1200);
+    setTimeout(()=>{ ch = 0; li = (li + 1) % typedLines.length; typeLoop(); }, 1000);
   }
 }
-setTimeout(typeLoop, 600);
+setTimeout(typeLoop, 400);
 
-// Skill node interactions: show description on click/hover (accessible)
-document.querySelectorAll('.skills-pipeline .node').forEach(node => {
-  node.addEventListener('click', () => {
-    const title = node.textContent.trim();
-    const detail = node.dataset.title || "No details";
-    alert(title + "\\n\\n" + detail);
+// Skill card click opens a modal-like quick detail (simple)
+document.querySelectorAll('.skill-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const title = card.dataset.title || card.querySelector('h3')?.textContent;
+    const body = card.dataset.body || card.querySelector('.small')?.textContent || '';
+    showQuickModal(title, body);
   });
-  node.addEventListener('keyup', (e) => {
-    if(e.key === 'Enter') node.click();
-  });
+  card.addEventListener('keyup', (e) => { if(e.key === 'Enter') card.click(); });
 });
 
-// Terminal: click terminal area to run simple commands
-document.addEventListener('DOMContentLoaded', () => {
-  const term = document.querySelector('.terminal');
-  const output = document.getElementById('terminal-output');
+function showQuickModal(title, body){
+  // if modal exists remove it
+  const existing = document.getElementById('quick-modal');
+  if(existing) existing.remove();
 
-  if(!term) return;
-  term.addEventListener('click', async () => {
-    const cmd = prompt("Enter command (resume/github/linkedin):");
-    if(!cmd) return;
+  const modal = document.createElement('div');
+  modal.id = 'quick-modal';
+  modal.style.position = 'fixed';
+  modal.style.inset = '0';
+  modal.style.display = 'flex';
+  modal.style.alignItems = 'center';
+  modal.style.justifyContent = 'center';
+  modal.style.background = 'rgba(2,6,23,0.5)';
+  modal.style.zIndex = 1200;
 
-    const c = cmd.trim().toLowerCase();
-    if(c === 'resume'){
-      window.open('assets/nagarjuna_resume.pdf', '_blank');
-    } else if(c === 'github'){
-      window.open('https://github.com/YOUR_GITHUB', '_blank');
-    } else if(c === 'linkedin'){
-      window.open('https://www.linkedin.com/in/YOUR_LINKEDIN', '_blank');
-    } else {
-      const el = document.createElement('div');
-      el.textContent = `Unknown command: ${cmd}`;
-      output.appendChild(el);
-      setTimeout(()=> el.remove(), 3000);
-    }
-  });
-});
+  const card = document.createElement('div');
+  card.style.background = '#fff';
+  card.style.color = '#0f172a';
+  card.style.padding = '20px';
+  card.style.borderRadius = '12px';
+  card.style.maxWidth = '520px';
+  card.style.boxShadow = '0 20px 50px rgba(2,6,23,0.15)';
+  card.innerHTML = `<h3 style="margin-top:0">${title}</h3><p style="color:#475569">${body}</p><div style="text-align:right"><button id="close-modal" style="padding:8px 12px;border-radius:8px;border:none;background:#eef2ff;color:#3730a3;cursor:pointer">Close</button></div>`;
+  modal.appendChild(card);
+  document.body.appendChild(modal);
 
-// Accessibility: keyboard shortcuts to copy email
-document.addEventListener('keydown', (e) => {
-  if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'e'){
-    navigator.clipboard.writeText('knagarjunareddy60@gmail.com').then(() => {
-      alert('Email copied to clipboard: knagarjunareddy60@gmail.com');
+  document.getElementById('close-modal').addEventListener('click', ()=> modal.remove());
+  modal.addEventListener('click', (e) => { if(e.target === modal) modal.remove(); });
+}
+
+// Copy email button
+const copyBtn = document.getElementById('copy-email');
+if(copyBtn){
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText('knagarjunareddy60@gmail.com').then(()=> {
+      copyBtn.textContent = 'Copied ✓';
+      setTimeout(()=> copyBtn.textContent = 'Copy Email', 1600);
     });
-  }
-});
+  });
+}
