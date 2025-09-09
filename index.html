@@ -4,8 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Nagarjuna Reddy — DevOps Portfolio</title>
+
+  <!-- Fonts & icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Local styles/scripts -->
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -14,67 +18,139 @@
     <div class="brand">Nagarjuna<span>Reddy</span></div>
     <nav>
       <a href="#skills">Skills</a>
+      <a href="#pipeline">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main class="wrap">
+    <!-- HERO -->
     <section class="hero">
-      <h1>🚀 DevOps Engineer</h1>
-      <p>Building scalable CI/CD pipelines, Kubernetes clusters, and automated cloud infrastructure.</p>
-      <a class="btn primary" href="assets/nagarjuna_resume.pdf" target="_blank">
-        <i class="fa-solid fa-file-arrow-down"></i> Resume
-      </a>
-    </section>
+      <div class="hero-left">
+        <!-- optional profile image -->
+        <div class="profile-wrap">
+          <img src="assets/profile.jpg" alt="Nagarjuna Reddy" class="profile"/>
+          <div class="ring"></div>
+        </div>
+      </div>
 
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill">AWS</div>
-        <div class="skill">Azure</div>
-        <div class="skill">Azure DevOps Pipelines</div>
-        <div class="skill">Jenkins</div>
-        <div class="skill">Docker</div>
-        <div class="skill">Kubernetes</div>
-        <div class="skill">Terraform</div>
-        <div class="skill">ArgoCD</div>
-        <div class="skill">Prometheus</div>
-        <div class="skill">Grafana</div>
-        <div class="skill">SonarQube</div>
+      <div class="hero-right">
+        <h1>🚀 DevOps Engineer</h1>
+        <p class="lead">Deploying reliable CI/CD pipelines, Kubernetes clusters, and cloud automation across AWS & Azure.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="assets/nagarjuna_resume.pdf" target="_blank">
+            <i class="fa-solid fa-file-arrow-down"></i> Resume
+          </a>
+          <a class="btn ghost" href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+        </div>
+
+        <div class="cli" aria-hidden="false">
+          <span class="prompt">&gt;</span>
+          <span id="typed"></span>
+          <span class="cursor">█</span>
+        </div>
       </div>
     </section>
 
+    <!-- SKILLS (pipeline nodes) -->
+    <section id="skills" class="section">
+      <h2>Skills Pipeline</h2>
+      <p class="muted">Hover nodes to highlight; click to learn more.</p>
+      <div class="pipeline skills-pipeline" id="skills-pipeline" role="list">
+        <!-- nodes are generated inline for simplicity -->
+        <div class="node" tabindex="0" data-title="AWS — VPC, EC2, EKS, S3, Glue">AWS</div>
+        <div class="node" tabindex="0" data-title="Azure — AKS, ACR, Bicep, App Insights">Azure</div>
+        <div class="node" tabindex="0" data-title="Azure DevOps — Pipelines, Repos, Artifacts">Azure DevOps</div>
+        <div class="node" tabindex="0" data-title="Jenkins — Pipelines, Groovy">Jenkins</div>
+        <div class="node" tabindex="0" data-title="Docker — Images, Compose">Docker</div>
+        <div class="node" tabindex="0" data-title="Kubernetes — AKS/EKS, Helm, ArgoCD">Kubernetes</div>
+        <div class="node" tabindex="0" data-title="Terraform — Modules, State, AWS & Azure">Terraform</div>
+        <div class="node" tabindex="0" data-title="ArgoCD — GitOps deployments">ArgoCD</div>
+        <div class="node" tabindex="0" data-title="Prometheus — Metrics, Alerts">Prometheus</div>
+        <div class="node" tabindex="0" data-title="Grafana — Dashboards, Alerts">Grafana</div>
+        <div class="node" tabindex="0" data-title="SonarQube — SAST, Quality Gates">SonarQube</div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE (animated pipeline flow) -->
+    <section id="pipeline" class="section">
+      <h2>Experience Pipeline</h2>
+      <div class="exp-wrapper">
+        <div class="pipeline exp-pipeline" aria-hidden="false">
+          <div class="stage">
+            <div class="stage-dot"></div>
+            <div class="stage-card">
+              <h3>Happiest Minds</h3>
+              <div class="muted">2019 — 2021</div>
+              <p>Jenkins, TeamCity, Kubernetes deployments, Kafka, Prometheus & Grafana.</p>
+            </div>
+          </div>
+
+          <div class="stage">
+            <div class="stage-dot"></div>
+            <div class="stage-card">
+              <h3>Motivity Labs</h3>
+              <div class="muted">2021 — 2023</div>
+              <p>Hybrid AWS & Azure, CI/CD automation, Nexus, ELK, release orchestration.</p>
+            </div>
+          </div>
+
+          <div class="stage">
+            <div class="stage-dot"></div>
+            <div class="stage-card">
+              <h3>WS Audiology</h3>
+              <div class="muted">2023 — Present</div>
+              <p>Azure IaC (Bicep/OpenTofu), Argo CD, AKS, Umbrella Helm, Grafana monitoring.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <h2>Projects & Pods</h2>
       <div class="projects-grid">
-        <div class="pod">
+        <article class="pod" tabindex="0">
           <div class="pod-front">
             <h3>FitXP</h3>
             <p class="muted">Azure DevOps • AKS • ArgoCD</p>
           </div>
           <div class="pod-back">
-            <p>Umbrella Helm, Argo Rollouts, Zero downtime deployments, Grafana dashboards.</p>
+            <p>Umbrella Helm, Argo Rollouts (blue/green), CI automation, Grafana dashboards.</p>
           </div>
-        </div>
-        <div class="pod">
+        </article>
+
+        <article class="pod" tabindex="0">
           <div class="pod-front">
             <h3>Helix Sense</h3>
             <p class="muted">AWS Glue • IoT • Terraform</p>
           </div>
           <div class="pod-back">
-            <p>Device streaming pipelines, automated infra, scalable orchestration.</p>
+            <p>Device streaming → Glue → DB; infra automation and pipeline orchestration.</p>
           </div>
-        </div>
+        </article>
+
+        <article class="pod" tabindex="0">
+          <div class="pod-front">
+            <h3>HH Global</h3>
+            <p class="muted">Jenkins • Docker • Kafka</p>
+          </div>
+          <div class="pod-back">
+            <p>Build optimizations, Docker staging, Kafka integration, monitoring.</p>
+          </div>
+        </article>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:knagarjunareddy60@gmail.com">knagarjunareddy60@gmail.com</a></p>
-      <p>Phone: +91 9618338684</p>
-      <p><a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a> | 
-         <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a></p>
+      <h2>Contact — Terminal</h2>
+      <div class="terminal" role="application" aria-label="Interactive terminal">
+        <p><span class="prompt">➜</span> Click here and type <code>resume</code>, <code>github</code>, or <code>linkedin</code></p>
+        <div id="terminal-output" aria-live="polite"></div>
+      </div>
     </section>
   </main>
 
