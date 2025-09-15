@@ -137,11 +137,19 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe 
   line-height: 1.5;
 }
 /* 🔹 Stronger Grid Background Animation */
+/* Remove solid background from body */
+body {
+  position: relative;
+  background: none; /* important */
+  color: var(--text);
+}
+
+/* 🔹 Animated Grid Background */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-color: var(--bg); /* light base */
+  background-color: var(--bg); /* your base light background */
   background-image: 
     linear-gradient(45deg, rgba(99,102,241,0.15) 1px, transparent 1px),
     linear-gradient(-45deg, rgba(14,165,233,0.15) 1px, transparent 1px);
@@ -154,4 +162,5 @@ body::before {
   0% { background-position: 0 0, 0 0; }
   100% { background-position: 60px 60px, -60px -60px; }
 }
+
 
