@@ -1,146 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nagarjuna Reddy | DevOps Engineer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nagarjuna Reddy — DevOps Engineer</title>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles & script -->
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav>
-      <h2 class="logo">Nagarjuna<span>Reddy</span></h2>
-      <ul>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Nagarjuna<span>Reddy</span></div>
+      <nav class="top-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-left">
-      <img src="assets/photo.jpg" alt="Profile" class="profile-pic">
-      <p class="role">DevOps Engineer</p>
-    </div>
-    <div class="hero-right">
-      <h1>Nagarjuna <span>Reddy</span></h1>
-      <p>Designing resilient cloud platforms & automating CI/CD for fast, reliable delivery.</p>
-      <div class="buttons">
-        <a href="assets/nagarjuna_k_devops_6years_resume.pdf" class="btn resume">📄 Download Resume</a>
-        <a href="#projects" class="btn projects">🚀 View Projects</a>
-      </div>
-      <pre class="terminal">&gt; deploying nagarjuna.devops:v6.0</pre>
-      <ul class="info">
-        <li><b>Location:</b> India</li>
-        <li><b>Experience:</b> 6+ years</li>
-        <li><b>Email:</b> <a href="mailto:knagarjunareddy60@gmail.com">knagarjunareddy60@gmail.com</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      I'm a DevOps Engineer focused on cloud-native architectures, automation, and observability. 
-      I design IaC, implement GitOps flows (ArgoCD), and build resilient apps on AKS/EKS with Helm. 
-      Skilled across AWS & Azure, Terraform/Bicep, and modern CI/CD practices.
-    </p>
-    <div class="stats">
-      <div class="stat"><h3>50+</h3><p>Pipelines automated</p></div>
-      <div class="stat"><h3>100+</h3><p>K8s deployments</p></div>
-      <div class="stat"><h3>99.9%</h3><p>Platform uptime</p></div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-
-      <!-- Example Flip Card -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h3>Cloud</h3>
-            <p>AWS, Azure</p>
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="profile-card">
+          <div class="photo-wrap">
+            <img src="assets/photo.jpg" alt="Nagarjuna Reddy" class="profile-photo" />
           </div>
-          <div class="flip-card-back">
-            <p>Experience in designing scalable cloud infra with VPC, AKS, EKS, VMSS, and monitoring setups.</p>
-          </div>
+          <div class="tag">DevOps Engineer</div>
         </div>
       </div>
 
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h3>CI/CD</h3>
-            <p>Azure DevOps, Jenkins</p>
+      <div class="hero-right">
+        <h1 class="name">Nagarjuna <span class="accent">Reddy</span></h1>
+        <p class="headline">Designing resilient cloud platforms & automating CI/CD for fast, reliable delivery.</p>
+
+        <div class="hero-ctas">
+          <a class="btn primary" href="assets/nagarjuna_k_devops_6years_resume.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+          <a class="btn outline" href="#projects"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
+        </div>
+
+        <div class="typed-line" aria-hidden="false"><span class="prompt">&gt;</span> <span id="typed"></span><span class="cursor">█</span></div>
+
+        <ul class="hero-meta">
+          <li><strong>Location:</strong> India</li>
+          <li><strong>Experience:</strong> 6+ years</li>
+          <li><strong>Email:</strong> <a href="mailto:knagarjunareddy60@gmail.com">knagarjunareddy60@gmail.com</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section split">
+      <div>
+        <h2>About</h2>
+        <p>I'm a DevOps Engineer focused on cloud-native architectures, automation, and observability. I design IaC, implement GitOps flows (ArgoCD), and build resilient apps on AKS/EKS with Helm. Skilled across AWS & Azure, Terraform/Bicep, and modern CI/CD practices.</p>
+      </div>
+      <div class="cards-row">
+        <div class="stat">
+          <div class="num">50+</div>
+          <div class="label">Pipelines automated</div>
+        </div>
+        <div class="stat">
+          <div class="num">100+</div>
+          <div class="label">K8s deployments</div>
+        </div>
+        <div class="stat">
+          <div class="num">99.9%</div>
+          <div class="label">Platform uptime</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS GRID -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+    
+      <div class="skills-grid">
+        <!-- Cloud -->
+        <article class="skill-card flip">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="icon"><i class="fa-brands fa-aws"></i></div>
+              <h3>Cloud</h3>
+              <p class="small muted">AWS • Azure</p>
+            </div>
+            <div class="flip-back">
+              <h3>Cloud</h3>
+              <p>AWS & Azure: VPC, EKS/AKS, ACR, S3, VMSS, CDN.</p>
+            </div>
           </div>
-          <div class="flip-card-back">
-            <p>Automated 50+ pipelines with YAML, GitHub Actions, and Azure DevOps for fast delivery.</p>
+        </article>
+    
+        <!-- CI/CD -->
+        <article class="skill-card flip">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="icon"><i class="fa-solid fa-code-merge"></i></div>
+              <h3>CI / CD</h3>
+              <p class="small muted">Azure DevOps Pipelines • Jenkins</p>
+            </div>
+            <div class="flip-back">
+              <h3>CI / CD</h3>
+              <p>Azure DevOps Pipelines, Jenkins, GitHub Actions, TeamCity.  
+                 Built reusable templates & release orchestration.</p>
+            </div>
+          </div>
+        </article>
+    
+        <!-- Containers -->
+        <article class="skill-card flip">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="icon"><i class="fa-brands fa-docker"></i></div>
+              <h3>Containers</h3>
+              <p class="small muted">Docker • Kubernetes • Helm</p>
+            </div>
+            <div class="flip-back">
+              <h3>Containers</h3>
+              <p>Dockerized workloads, Kubernetes clusters (AKS/EKS),  
+                 Helm umbrella charts, GitOps with ArgoCD.</p>
+            </div>
+          </div>
+        </article>
+    
+        <!-- IaC -->
+        <article class="skill-card flip">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="icon"><i class="fa-solid fa-cubes"></i></div>
+              <h3>IaC</h3>
+              <p class="small muted">Terraform • Bicep • Ansible</p>
+            </div>
+            <div class="flip-back">
+              <h3>Infrastructure as Code</h3>
+              <p>Terraform & Bicep modules, OpenTofu, Ansible automation,  
+                 policy enforcement and state management.</p>
+            </div>
+          </div>
+        </article>
+    
+        <!-- Observability -->
+        <article class="skill-card flip">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+              <h3>Observability</h3>
+              <p class="small muted">Prometheus • Grafana • ELK</p>
+            </div>
+            <div class="flip-back">
+              <h3>Observability</h3>
+              <p>Prometheus + Grafana dashboards, ELK stack, Azure Monitor,  
+                 App Insights for proactive alerts and telemetry.</p>
+            </div>
+          </div>
+        </article>
+    
+        <!-- Quality & Security -->
+        <article class="skill-card flip">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h3>Quality & Sec</h3>
+              <p class="small muted">SonarQube • SAST • Nexus</p>
+            </div>
+            <div class="flip-back">
+              <h3>Quality & Security</h3>
+              <p>SonarQube quality gates, static code analysis (SAST),  
+                 dependency scanning, and artifact repository (Nexus).</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <h3>WS Audiology <span class="muted">• 2023 — Present</span></h3>
+            <p>Azure IaC (Bicep/OpenTofu), ArgoCD, AKS, Umbrella Helm charts, monitoring with Grafana & App Insights.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <h3>Motivity Labs <span class="muted">• 2021 — 2023</span></h3>
+            <p>Hybrid AWS & Azure, automated CI/CD pipelines, Nexus & ELK, enforced code quality standards.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <h3>Happiest Minds <span class="muted">• 2019 — 2021</span></h3>
+            <p>Jenkins, TeamCity, Kubernetes deployments, Kafka, Prometheus & Grafana monitoring.</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h3>Containers</h3>
-            <p>Docker, Kubernetes, Helm</p>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Key Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-head">
+            <h3>FitXP</h3>
+            <div class="tags">Azure DevOps • AKS • ArgoCD</div>
           </div>
-          <div class="flip-card-back">
-            <p>Hands-on with AKS/EKS, Helm charts, ArgoCD, and container security best practices.</p>
+          <p>Umbrella Helm charts, Argo Rollouts (blue/green), CI automation, Grafana dashboards and cost optimization.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head">
+            <h3>Helix Sense</h3>
+            <div class="tags">AWS Glue • IoT • Terraform</div>
+          </div>
+          <p>Device streaming pipeline into AWS Glue, infra automation with Terraform and scalable pipeline orchestration.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head">
+            <h3>HH Global</h3>
+            <div class="tags">Jenkins • Docker • Kafka</div>
+          </div>
+          <p>Pipeline optimization, Docker staging, Kafka integration and monitoring with Prometheus & Grafana.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+
+      <div class="contact-grid">
+        <form id="contact-form" action="mailto:knagarjunareddy60@gmail.com" method="post" enctype="text/plain" class="contact-form">
+          <label><span>Name</span><input type="text" name="name" required></label>
+          <label><span>Email</span><input type="email" name="email" required></label>
+          <label><span>Message</span><textarea name="message" rows="4" required></textarea></label>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send Email</button>
+          </div>
+        </form>
+
+        <div class="contact-cards">
+          <div class="card">
+            <h4>Resume</h4>
+            <p><a href="assets/nagarjuna_k_devops_6years_resume.pdf" target="_blank">Download</a></p>
+          </div>
+          <div class="card">
+            <h4>Links</h4>
+            <p><a href="https://github.com/nagarjunareddy1996" target="_blank">GitHub</a> • <a href="https://linkedin.com/in/nagarjuna-reddy-koravulapalli" target="_blank">LinkedIn</a></p>
           </div>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h3>IaC</h3>
-            <p>Terraform, Bicep, Ansible</p>
-          </div>
-          <div class="flip-card-back">
-            <p>Provisioned infra using Terraform modules, Bicep templates, and automated config via Ansible.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h3>Observability</h3>
-            <p>Prometheus, Grafana, ELK</p>
-          </div>
-          <div class="flip-card-back">
-            <p>Set up monitoring stacks with Grafana dashboards, Prometheus alerts, and centralized logging.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h3>Quality & Security</h3>
-            <p>SonarQube, SAST, Nexus</p>
-          </div>
-          <div class="flip-card-back">
-            <p>Implemented code quality gates, vulnerability scans, and artifact management pipelines.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Nagarjuna Reddy | DevOps Portfolio</p>
+  <footer class="site-footer">
+    <div class="container">© 2025 Nagarjuna Reddy — DevOps Engineer</div>
   </footer>
 </body>
 </html>
