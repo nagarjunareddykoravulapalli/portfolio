@@ -136,26 +136,22 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe 
   font-size: 14px;
   line-height: 1.5;
 }
-/* 🔹 Grid Background Animation */
-/* 🔹 Grid Background Animation */
-body {
-  position: relative; /* ensure ::before is placed correctly */
-  background: none;   /* remove solid fill so grid shows */
-}
+/* 🔹 Stronger Grid Background Animation */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: var(--bg); /* keeps your light background */
+  background-color: var(--bg); /* light base */
   background-image: 
-    linear-gradient(45deg, rgba(99,102,241,0.07) 1px, transparent 1px),
-    linear-gradient(-45deg, rgba(14,165,233,0.07) 1px, transparent 1px);
+    linear-gradient(45deg, rgba(99,102,241,0.15) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(14,165,233,0.15) 1px, transparent 1px);
   background-size: 60px 60px;
   animation: gridMove 12s linear infinite;
   z-index: -1;
-  pointer-events: none; /* so it won’t block clicks */
+  pointer-events: none;
 }
 @keyframes gridMove {
   0% { background-position: 0 0, 0 0; }
   100% { background-position: 60px 60px, -60px -60px; }
 }
+
